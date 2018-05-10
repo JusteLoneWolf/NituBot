@@ -2,6 +2,7 @@ const Discord = require('discord.js')
 const client = new Discord.Client()
 const config = require('./config.json');
 const fs = require('fs');
+require('./util/eventLoader')(client);
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
