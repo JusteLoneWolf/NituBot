@@ -92,7 +92,7 @@ let defineduser = message.mentions.users.first();
   .catch(console.error);
 }
   if (message.content === prefix +  "help") {
-    message.channel.send ("**Liste des commandes**\n\n__uptime__ : Affiche quelques information sur le bot\n__ping__: Affichde le ping du bot")
+    message.channel.send (`**Liste des commandes**\nLe prefix est ${prefix} \n\n__uptime__ : Affiche quelques information sur le bot\n__ping__: Affichde le ping du bot`)
   }
        if (message.content === prefix + "ping") {
    let ping_embed = new Discord.RichEmbed ()
