@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 exports.run = async (client, message) => {
 
- let ms = bot.uptime;
+ let ms = client.uptime;
  let cd = 24 * 60 * 60 * 1000; // Calc days
  let ch = 60 * 60 * 1000; // Calc hours
  let cm = 60 * 1000; // Calc minutes
