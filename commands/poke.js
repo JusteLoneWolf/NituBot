@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 exports.run = async (client, message, args) => {
-
+let defineduser = message.mentions.users.first();
 	let user = message.author
    let pokeraison = args.slice(23);
 
