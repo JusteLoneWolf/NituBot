@@ -85,6 +85,6 @@ exports.conf = {
   
   exports.help = {
     name: 'uptime',
-    description: 'Zechaos fait la description please jsp quoi mettre x)',
+    description: 'Descriptif rapide du bot ',
     usage: 'uptime'
   };
