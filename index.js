@@ -21,6 +21,18 @@ fs.readdir('./commands/', (err, files) => {
   var totalcmd =  Math.floor(files.length);
   console.log(`Il y a un total de ${totalcmd} commandes 👍.`);
 
+client.elevation = message => {
+  /* This function should resolve to an ELEVATION level which
+     is then sent to the command handler for verification*/
+  let permlvl = 0;
+  const mod_role = message.guild.roles.find('name', config.modrolename);
+  if (mod_role && message.member.roles.has(mod_role.id)) permlvl = 2;
+  const admin_role = message.guild.roles.find('name', config.adminrolename);
+  if (admin_role && message.member.roles.has(admin_role.id)) permlvl = 3;
+  if (message.author.id === config.ownerid) permlvl = 4;
+  return permlvl;
+};
+
   var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
   // client.on('debug', e => {
   //   console.log(chalk.bgBlue.green(e.replace(regToken, 'that was redacted')));
