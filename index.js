@@ -17,10 +17,6 @@ fs.readdir('./commands/', (err, files) => {
   });
 });
 
-
-  var totalcmd =  Math.floor(files.length);
-  console.log(`Il y a un total de ${totalcmd} commandes 👍.`);
-
 client.elevation = message => {
   /* This function should resolve to an ELEVATION level which
      is then sent to the command handler for verification*/
