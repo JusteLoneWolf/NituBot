@@ -68,7 +68,6 @@ exports.run = async (client, message) => {
 .setThumbnail(message.author.iconURL)
 .addField(':clock: Actif ', 'Le bot est actif', false )
 .addField(':white_check_mark: Bot actif depuis :', dateString, false )
-.addField ('📈 Utilisation mémoire' , `${Math.round(used * 100) / 100} MB/500MB`, false)
 .addField(':runner: Serveur disponible :', `**${client.guilds.size}** servers`, false )
 .addField ('👥 Utilisateur:', ` ${client.users.size} utilisateurs`, false)
 .addField ('🏓 Ping :', `${Date.now() - message.createdTimestamp} ms`, false)
