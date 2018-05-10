@@ -5,9 +5,9 @@ let prefix = "&"
 
 bot.on('ready',function() {
 
-        bot.user.setStatus( 'online' );
-        bot.user.setActivity(prefix + `help | ${bot.guilds.size} serveurs  | ${bot.users.size} utilisateurs`,{type: "WATCHING"});
-        //bot.user.setActivity("En maintenance")
+        bot.user.setStatus( 'Away' );
+        //bot.user.setActivity(prefix + `help | ${bot.guilds.size} serveurs  | ${bot.users.size} utilisateurs`,{type: "WATCHING"});
+        bot.user.setActivity("En maintenance")
 
   console.log("Je suis connecté !\n====================================\n\n" + bot.users.size + " utilisateurs \n" + bot.guilds.size + " serveurs \n\n====================================\n\n" + bot.guilds.array ())
 })
