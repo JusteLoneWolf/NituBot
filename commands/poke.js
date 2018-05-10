@@ -7,7 +7,11 @@ exports.run = async (client, message, args) => {
 
     if (!args[0]) {return message.channel.send (`Veuillez spécifiez un utilisateur .`)
     }else if (!pokeraison[0]) {return message.channel.send (`Veuillez mettre une raison à votre poke.`)
-
+let Embed = new Discord.RichEmbed()
+    .setTitle('Poke')
+    .addField('Tu as était appelé .', `Par: ${user}\nDans: ${message.guild.name}\nAu salon: <#${message.channel.id}>\nRaison: Aucune raison spécifier `, true)
+    .setColor("#AB49CD")
+    defineduser.send(Embed)
 		  }else{
 
             let Embed = new Discord.RichEmbed()
