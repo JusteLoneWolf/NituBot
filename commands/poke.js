@@ -26,6 +26,6 @@ exports.conf = {
   
   exports.help = {
     name: 'poke',
-    description: 'Poke l' utilisateur mentionné avec une raison .',
+    description: "Poke l' utilisateur mentionné avec une raison ." ,
     usage: 'poke [mention] [raison] '
   };
