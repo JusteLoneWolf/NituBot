@@ -11,7 +11,7 @@ bot.on('ready',function() {
 
   console.log("Je suis connecté !\n====================================\n\n" + bot.users.size + " utilisateurs \n" + bot.guilds.size + " serveurs \n\n====================================\n\n" + bot.guilds.array ())
 })
-bot.on("message", async message => {
+bot.on("message", message => {
 	const used = process.memoryUsage().heapUsed / 1024 / 1024;
 let defineduser = message.mentions.users.first();
   
@@ -93,16 +93,16 @@ let defineduser = message.mentions.users.first();
 }
   if (message.content === prefix +  "help") {
     message.channel.send ("**Liste des commandes**\n\n__uptime__ : Affiche quelques information sur le bot\n__ping__: Affichde le ping du bot")
+  }
        if (message.content === prefix + "ping") {
    let ping_embed = new Discord.RichEmbed ()
        .setColor('#333333')
        .setTitle ("Ping")
        .addField ('Pong! Mon ping est de', '***' + `${Date.now() - message.createdTimestamp}` + ' ms***🏓', true )
-       //).addField(" Ping local", '***' + Math.round(altair.ping) + " ms***", false )
        .setTimestamp()
        .setFooter(` Ping |`);
     message.channel.send(ping_embed) ;
     console.log (`${message.author.username} |ping `)
-}
-});
+       }
+})
 bot.login (process.env.TOKEN)
