@@ -1,10 +1,11 @@
 const chalk = require('chalk');
 const Discord = require('discord.js');
 const purplecolor = chalk.keyword('purple');
+const settings = require('../config.json');
 
 module.exports = client => { // eslint-disable-line no-unused-vars
   console.log(purplecolor(`${client.user.username} en ligne. \n` + 'Connecté dans:\n' + client.guilds.array()));
- client.user.setActivity(`${client.users.size} utilisateurs et ${client.guilds.size} serveurs || //help`, {type: "WATCHING"})
+ client.user.setActivity(settings.prefix + `help | ${bot.guilds.size} serveurs  | ${bot.users.size} utilisateurs`,{type: "WATCHING"});
   //client.user.setAvatar("PdpPourLeBot");
   
-};
+}; 
