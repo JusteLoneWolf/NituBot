@@ -32,7 +32,7 @@ let afk = JSON.parse(fs.readFileSync("../afks.json", "utf8"));
 				message.channel.send(`@${mentionned.username} est AFK: ${afk[message.mentions.users.first().id].reason}`);
 			     }
 			}
-		}
+		
 	
     exports.conf = {
     enabled: true,
