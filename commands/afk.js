@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-
+const fr = require ("fs") 
 exports.run = async (client, message, args) => {
 
 
@@ -14,14 +14,14 @@ let afk = JSON.parse(fs.readFileSync("../afks.json", "utf8"));
 				if (args1.length === 0) {
 					afk[message.author.id] = {"reason" : true};
 
-					message.channel.send("Tu es désormais afk, met `++remafk` pour enlever ton afk")
+					message.channel.send("Tu es désormais afk, met `&remafk` pour enlever ton afk")
 				}else{
-					afk[message.author.id] = {"reason" : args1.join(" ")};
-					message.channel.send("Tu es désormais afk, met `++remafk` pour enlever ton afk" )
+					afk[message.author.id] = {"reason" : args.join(" ")};
+					message.channel.send("Tu es désormais afk, met `&remafk` pour enlever ton afk" )
 				}
-					fs.writeFile("./afks.json", JSON.stringify(afk), (err) => { if (err) console.error(err);});
+					fs.writeFile("../afks.json", JSON.stringify(afk), (err) => { if (err) console.error(err);});
 				}
-		}
+		
 
    		 var mentionned = message.mentions.users.first();
 			if(message.mentions.users.size > 0) {
@@ -33,6 +33,7 @@ let afk = JSON.parse(fs.readFileSync("../afks.json", "utf8"));
 			     }
 			}
 		}
+	
     exports.conf = {
     enabled: true,
     guildOnly: false,
