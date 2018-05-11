@@ -3,9 +3,10 @@ const Discord = require('discord.js');
 exports.run = async (client, message, args) => {
 let defineduser = message.mentions.users.first();
 	let user = message.author
-   let pokeraison = args.join(" ").slice(22);;
+	let test = message.content.split(" ").slice(1);
+   let pokeraison = test.join(" ").slice(22);;
 
-    if (!args[0]) {return message.channel.send (`Veuillez spécifiez un utilisateur .`)
+    if (!test[0]) {return message.channel.send (`Veuillez spécifiez un utilisateur .`)
     }else if (!pokeraison[0]) {
 let Embed = new Discord.RichEmbed()
     .setTitle('Poke')
