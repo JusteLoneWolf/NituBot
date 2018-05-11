@@ -5,7 +5,7 @@ let defineduser = message.mentions.users.first();
 	const test = message.content.split(" ").slice(1).join(" ");
 
 	let user = message.author
-   let pokeraison = args.slice(23);
+   let pokeraison = test.slice(23);
     if (!test[0]) {return message.channel.send (`Veuillez spécifiez un utilisateur .`)
     }else if (!pokeraison[0]) {
 let Embed = new Discord.RichEmbed()
@@ -13,7 +13,7 @@ let Embed = new Discord.RichEmbed()
     .addField('Tu as était appelé .', `Par: ${user}\nDans: ${message.guild.name}\nAu salon: <#${message.channel.id}>\nRaison: Aucune raison spécifier `, true)
     .setColor("#AB49CD")
     defineduser.send(Embed)
-	    message.author.sendMessage(`Votre poke à bel est bien était envoyé à ${defineduser.username}. `) 
+	    message.author.send(`Votre poke à bel est bien était envoyé à ${defineduser.username}. `) 
  
 		  }else{
 
@@ -22,7 +22,7 @@ let Embed = new Discord.RichEmbed()
     .addField('Tu as était appelé .', `Par: ${user}\nDans: ${message.guild.name}\nAu salon: <#${message.channel.id}>\nRaison: ${pokeraison} `, true)
     .setColor("#AB49CD")
     defineduser.send(Embed)
-			  //message.author.sendMessage(`Votre poke à bel est bien était envoyé à ${defineduser.username} avec la raison **${pokeraison}**. `) 
+			  message.author.send(`Votre poke à bel est bien était envoyé à ${defineduser.username} avec la raison **${pokeraison}**. `) 
                   }
 }
 exports.conf = {
