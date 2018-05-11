@@ -34,6 +34,6 @@ exports.conf = {
   
   exports.help = {
     name: 'poke',
-    description: "Poke l' utilisateur mentionné avec une raison ." ,
-    usage: 'poke [mention] [raison] '
+    description: "Vous appelez l' utilisateur mentionné avec une raison ." ,
+    usage: "\n\nMerci de ne pas prendre en compte les [] ou <> lors de l'exécution de la commande \npoke [mention] [raison]\npoke [mention]" 
   };
