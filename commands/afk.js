@@ -41,7 +41,8 @@ let afk = JSON.parse(fs.readFileSync("../afks.json", "utf8"));
   };
   
   exports.help = {
-    name: 'afk'
+    name: 'afk', 
     description: " Vous vous mettez afk." ,
     usage: "\n\nMerci de ne pas prendre en compte les [] ou <> lors de l'exécution de la commande \n\afk [raison]\nafk " 
   };
+
