@@ -3,7 +3,7 @@ const fr = require ("fs")
 exports.run = async (client, message, args) => {
 
 
-let afk = JSON.parse(fs.readFileSync("../afks.json", "utf8"));
+/*let afk = JSON.parse(fs.readFileSync("../afks.json", "utf8"));
 		
 
 
@@ -33,7 +33,7 @@ let afk = JSON.parse(fs.readFileSync("../afks.json", "utf8"));
 			     }
 			
 				  } 
-				}
+				}*/
 		
 	
     exports.conf = {
