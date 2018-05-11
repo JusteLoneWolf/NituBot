@@ -2,10 +2,10 @@ const Discord = require('discord.js');
 
 exports.run = async (client, message, args) => {
 let defineduser = message.mentions.users.first();
-	let user = message.author
-	let test = message.content.split(" ").slice(1);
-   let pokeraison = test.join(" ").slice(22);;
+	const test = message.content.split(" ").slice(1).join(" ");
 
+	let user = message.author
+   let pokeraison = args.slice(23);
     if (!test[0]) {return message.channel.send (`Veuillez spécifiez un utilisateur .`)
     }else if (!pokeraison[0]) {
 let Embed = new Discord.RichEmbed()
