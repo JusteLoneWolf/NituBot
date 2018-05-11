@@ -22,7 +22,7 @@ let Embed = new Discord.RichEmbed()
     .addField('Tu as était appelé .', `Par: ${user}\nDans: ${message.guild.name}\nAu salon: <#${message.channel.id}>\nRaison: ${pokeraison} `, true)
     .setColor("#AB49CD")
     defineduser.send(Embed)
-			  message.author.sendMessage(`Votre poke à bel est bien était envoyé à ${defineduser.username} avec la raison **${pokeraison}**. `) 
+			  //message.author.sendMessage(`Votre poke à bel est bien était envoyé à ${defineduser.username} avec la raison **${pokeraison}**. `) 
                   }
 }
 exports.conf = {
