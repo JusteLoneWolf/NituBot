@@ -20,8 +20,7 @@ fs.readdir('./commands/', (err, files) => {
 });
 
 client.elevation = message => {
-  /* This function should resolve to an ELEVATION level which
-     is then sent to the command handler for verification*/
+
   let permlvl = 0;
   const mod_role = message.guild.roles.find('name', config.modrolename);
   if (mod_role && message.member.roles.has(mod_role.id)) permlvl = 2;
@@ -32,9 +31,7 @@ client.elevation = message => {
 };
 
   var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
-  // client.on('debug', e => {
-  //   console.log(chalk.bgBlue.green(e.replace(regToken, 'that was redacted')));
-  // });
+
   
   client.on('warn', e => {
     console.log(chalk.bgYellow(e.replace(regToken, 'qui a été expurgé')));
